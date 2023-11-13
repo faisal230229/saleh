@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 use Illuminate\View\View;
 
 class ProfileController extends Controller
@@ -60,7 +62,7 @@ class ProfileController extends Controller
 
     function setLocaleDefault(Request $request)
     {
-//        dd($request->all());
+        Session::put('locale', $request->input('locale'));
         \Illuminate\Support\Facades\App::setLocale($request->input('locale'));
         return redirect()->back();
     }

@@ -14,7 +14,7 @@ class Create extends Component
 
     #[Rule('required')]
     public string $title;
-    #[Rule('required|mimetypes:png,jpeg,svg,webp')]
+    #[Rule('required')]
     public $thumbnail;
     #[Rule('required')]
     public string $order;

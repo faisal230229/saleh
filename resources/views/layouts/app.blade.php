@@ -1,5 +1,8 @@
+@php
+    app()->setLocale(session()->get('locale') ?? app()->getLocale())
+@endphp
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ app()->getLocale() }}">
     <head>
         @include('layouts.partials.head')
         <!-- Scripts -->
