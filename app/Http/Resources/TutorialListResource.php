@@ -17,7 +17,7 @@ class TutorialListResource extends JsonResource
         return [
             'id' => $this->id,
             'title' => $this->title,
-            'featured_image' => $this->featured_image,
+            'featured_image' => asset('storage/uploads/tutorials/'.$this->featured_image),
         ];
     }
 }

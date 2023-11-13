@@ -17,8 +17,8 @@ class TutorialDetailResource extends JsonResource
         return [
             'id' => $this->id,
             'title' => $this->title,
-            'featured_image' => $this->featured_image,
-            'secondary_image' => $this->secondary_image,
+            'featured_image' =>  asset('storage/uploads/tutorials/'.$this->featured_image),
+            'secondary_image' =>  asset('storage/uploads/tutorials/'.$this->secondary_image),
             'primary_content' => $this->primary_content,
             'secondary_content' => $this->secondary_content,
             'youtube_link' => $this->youtube_link,
