@@ -71,14 +71,16 @@
                                 {!! $tutorial->secondary_content  !!}
                             </td>
 
-                            <td class="text-center">
-                                {{ $tutorial->youtube_link }}
-                            </td>
 
                             <td class="text-center">
                                 <img src="{{ asset('storage/uploads/tutorials/'.$tutorial->secondary_image) }}" width="80"
                                      alt="{{ $tutorial->title }}">
                             </td>
+
+                            <td class="text-center">
+                                {{ $tutorial->youtube_link }}
+                            </td>
+
 
                             <td class="text-center">
                                 {{ $tutorial->order }}
