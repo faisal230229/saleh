@@ -59,6 +59,8 @@
                             </td>
                             <td class="text-center">
                                 <img src="{{ Storage::url('public/uploads/inspections/' . $inspection->thumbnail) }}" alt="">
+                                <img src="{{ asset('storage/uploads/inspections/'.$inspection->thumbnail) }}" width="80"
+                                     alt="{{ $inspection->title }}">
                             </td>
                             <td class="text-center">
                                 {!! $inspection->content  !!}
