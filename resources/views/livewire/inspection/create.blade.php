@@ -23,7 +23,7 @@
                         <label for="title"
                                class="col-sm-2 form-control-label">{!!  __('backend.title') !!} </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" wire:model="title" required>
+                            <input type="text" class="form-control" wire:model="title" required dir="rtl">
                         </div>
                         @error('title')
                         <span class="text-danger">{{ $message }}</span>
@@ -33,7 +33,7 @@
                         <label for="title"
                                class="col-sm-2 form-control-label">{!!  __('backend.content') !!} </label>
                         <div class="col-sm-10">
-                            <textarea class="form-control ckeditor" wire:model="content" required></textarea>
+                            <textarea class="form-control ckeditor" wire:model="content" required dir="rtl"></textarea>
                         </div>
                         @error('content')
                         <span class="text-danger">{{ $message }}</span>
@@ -44,7 +44,7 @@
                         <label for="title"
                                class="col-sm-2 form-control-label">{!!  __('backend.thumbnail') !!} </label>
                         <div class="col-sm-10">
-                            <input type="file" class="form-control" wire:model="thumbnail" required>
+                            <input type="file" class="form-control" wire:model="thumbnail" required dir="rtl">
                             @if($thumbnail)
                                 <span>
                                 <img width="80" src="{{ $thumbnail->temporaryUrl() }}">
@@ -60,7 +60,7 @@
                         <label for="title"
                                class="col-sm-2 form-control-label">{!!  __('backend.order') !!} </label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" wire:model="order" required>
+                            <input type="number" class="form-control" wire:model="order" required dir="rtl">
                         </div>
                         @error('order')
                         <span class="text-danger">{{ $message }}</span>
