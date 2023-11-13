@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/inspections', [\App\Http\Controllers\Api\ApiController::class, 'inspections']);
+Route::get('/purchase-inspections', [\App\Http\Controllers\Api\ApiController::class, 'purchaseInspections']);

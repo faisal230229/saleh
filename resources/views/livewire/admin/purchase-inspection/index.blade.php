@@ -17,24 +17,24 @@
         <div class="box">
             <div class="box-header">
                 <div class="col-sm-6">
-                    <h3>{{ __('backend.regularInspections') }}</h3>
+                    <h3>{{ __('backend.purchaseInspections') }}</h3>
                     <small>
                         <a href="{{ route('admin.dashboard') }}">{{ __('backend.home') }}</a> /
                         <a>{{ __('backend.sectionsOf') }} Index</a>
                     </small>
                 </div>
                 <div class="col-sm-6">
-                    <div class="col-sm-7 text-right">
+                    <div class="col-sm-6 text-right">
                         <div class="form-group">
-                            <input type="search" class="form-control" wire:model.live="search" dir="rtl"
+                            <input type="search" class="form-control" wire:model.live="search"  dir="rtl"
                                    placeholder="{{ __('backend.search') }}">
                         </div>
                     </div>
 
-                    <div class="col-sm-5">
-                        <a class="btn btn-fw primary" href="{{ route('admin.inspections.create') }}">
+                    <div class="col-sm-6">
+                        <a class="btn btn-fw primary" href="{{ route('admin.purchase_inspections.create') }}">
                             <i class="material-icons">&#xe02e;</i>
-                            &nbsp; {{ __('backend.inspectionNew') }}</a>
+                            &nbsp; {{ __('backend.purchaseInspectionNew') }}</a>
                     </div>
                 </div>
             </div>
@@ -52,13 +52,13 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($inspections as $inspection)
+                    @foreach($purchase_inspections as $inspection)
                         <tr>
                             <td class="h6">
                                 {{ $inspection->title }}
                             </td>
                             <td class="text-center">
-                                <img src="{{ asset('storage/uploads/inspections/'.$inspection->thumbnail) }}" width="80"
+                                <img src="{{ asset('storage/uploads/purchase-inspections/'.$inspection->thumbnail) }}" width="80"
                                      alt="{{ $inspection->title }}">
                             </td>
                             <td class="text-center">
@@ -70,15 +70,15 @@
                             </td>
 
                             <td class="text-center">
-{{--                                <a class="btn btn-sm info"--}}
-{{--                                   href=""--}}
-{{--                                   data-toggle="tooltip" data-original-title="{{ __('backend.viewDetails') }}"--}}
-{{--                                   target="_blank">--}}
-{{--                                    <i class="material-icons">&#xe8f4;</i>--}}
-{{--                                </a>--}}
+                                {{--                                <a class="btn btn-sm info"--}}
+                                {{--                                   href=""--}}
+                                {{--                                   data-toggle="tooltip" data-original-title="{{ __('backend.viewDetails') }}"--}}
+                                {{--                                   target="_blank">--}}
+                                {{--                                    <i class="material-icons">&#xe8f4;</i>--}}
+                                {{--                                </a>--}}
 
                                 <a class="btn btn-sm success"
-                                   href="{{ route('admin.inspections.edit', $inspection) }}"
+                                   href="{{ route('admin.purchase_inspections.edit', $inspection) }}"
                                    data-toggle="tooltip" data-original-title="{{ __('backend.edit') }}">
                                     <i class="material-icons">&#xe3c9;</i>
                                 </a>
@@ -125,12 +125,12 @@
 
                     <div class="col-sm-3 text-center">
                         <small
-                            class="text-muted inline m-t-sm m-b-sm">{{ __('backend.showing') }} {{ $inspections->firstItem() }}
-                            -{{ $inspections->lastItem() }} {{ __('backend.of') }}
-                            <strong>{{ $inspections->total()  }}</strong> {{ __('backend.records') }}</small>
+                            class="text-muted inline m-t-sm m-b-sm">{{ __('backend.showing') }} {{ $purchase_inspections->firstItem() }}
+                            -{{ $purchase_inspections->lastItem() }} {{ __('backend.of') }}
+                            <strong>{{ $purchase_inspections->total()  }}</strong> {{ __('backend.records') }}</small>
                     </div>
                     <div class="col-sm-6 text-right text-center-xs">
-                        {!! $inspections->links() !!}
+                        {!! $purchase_inspections->links() !!}
                     </div>
                 </div>
             </footer>
@@ -151,7 +151,7 @@
                     <button type="button" class="btn dark-white p-x-md"
                             data-dismiss="modal">{{ __('backend.no') }}</button>
                     <button type="button" id="category_delete_btn" wire:click.prevent="destroy" data-dismiss="modal"
-                       class="btn danger p-x-md">{{ __('backend.yes') }}</button>
+                            class="btn danger p-x-md">{{ __('backend.yes') }}</button>
                 </div>
             </div><!-- /.modal-content -->
         </div>

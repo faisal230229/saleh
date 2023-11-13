@@ -2,7 +2,7 @@
     <div class="padding">
         <div class="box">
             <div class="box-header dker">
-                <h3><i class="material-icons">&#xe02e;</i> {{ __('backend.regularInspections') }}</h3>
+                <h3><i class="material-icons">&#xe02e;</i> {{ __('backend.purchaseInspections') }}</h3>
                 <small>
                     <a href="{{ route('admin.dashboard') }}">{{ __('backend.home') }}</a> /
                     <a>{{ __('backend.sectionsOf') }} Index</a>
@@ -18,7 +18,7 @@
                 </ul>
             </div>
             <div class="box-body">
-                <form wire:submit.prevent="update">
+                <form wire:submit.prevent="store">
                     <div class="form-group row">
                         <label for="title"
                                class="col-sm-2 form-control-label">{!!  __('backend.title') !!} </label>
@@ -44,15 +44,11 @@
                         <label for="title"
                                class="col-sm-2 form-control-label">{!!  __('backend.thumbnail') !!} </label>
                         <div class="col-sm-10">
-                            <input type="file" class="form-control" wire:model="new_thumbnail"  dir="rtl">
-                            @if($new_thumbnail)
+                            <input type="file" class="form-control" wire:model="thumbnail" required dir="rtl">
+                            @if($thumbnail)
                                 <span>
-                                    <img width="80" src="{{ $new_thumbnail->temporaryUrl() }}">
-                                </span>
-                            @elseif($thumbnail)
-                                <span>
-                                    <img width="80" src="{{ asset('storage/uploads/inspections/'.$thumbnail) }}">
-                                </span>
+                                <img width="80" src="{{ $thumbnail->temporaryUrl() }}">
+                            </span>
                             @endif
                         </div>
 

@@ -54,6 +54,30 @@
                         </ul>
                     </li>
 
+                    <li>
+                        <a>
+                            <span class="nav-caret">
+                                <i class="fa fa-caret-down"></i>
+                            </span>
+                            <span class="nav-icon">
+                                <i class="material-icons">&#xe896;</i>
+                            </span>
+                            <span class="nav-text">{{ __('backend.purchaseInspectionNew') }}</span>
+                        </a>
+                        <ul class="nav-sub">
+                            <li>
+                                <a href="{{ route('admin.purchase_inspections.index') }}">
+                                    <span class="nav-text">{{ __('backend.list') }}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('admin.purchase_inspections.create') }}">
+                                    <span class="nav-text">{{ __('backend.create') }}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
 
                     {{--                    @if (env('GEOIP_STATUS', false))--}}
                     {{--                        @if(Helper::GeneralWebmasterSettings("analytics_status"))--}}

@@ -660,5 +660,16 @@ return array(
     'action' => 'Action',
     'inspectionCreated' => 'Inspection Added Successfully',
     'inspectionDeleted' => 'Inspection Deleted Successfully',
+    'inspectionUpdated' => 'Inspection Updated Successfully',
+
+    'purchaseInspectionCreated' => 'Purchase Inspection Added Successfully',
+    'purchaseInspectionDeleted' => 'Purchase Inspection Deleted Successfully',
+    'purchaseInspectionUpdated' => 'Purchase Inspection Updated Successfully',
+
+    'purchaseInspections' => 'Purchase Inspections',
+
+    'purchaseInspectionNew' => 'New Purchase Inspection',
+
+
 //    'search' => 'Search',
 );

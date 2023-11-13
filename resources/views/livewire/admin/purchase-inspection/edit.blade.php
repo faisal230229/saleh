@@ -2,7 +2,7 @@
     <div class="padding">
         <div class="box">
             <div class="box-header dker">
-                <h3><i class="material-icons">&#xe02e;</i> {{ __('backend.regularInspections') }}</h3>
+                <h3><i class="material-icons">&#xe02e;</i> {{ __('backend.purchaseInspections') }}</h3>
                 <small>
                     <a href="{{ route('admin.dashboard') }}">{{ __('backend.home') }}</a> /
                     <a>{{ __('backend.sectionsOf') }} Index</a>
@@ -51,7 +51,7 @@
                                 </span>
                             @elseif($thumbnail)
                                 <span>
-                                    <img width="80" src="{{ asset('storage/uploads/inspections/'.$thumbnail) }}">
+                                    <img width="80" src="{{ asset('storage/uploads/purchase-inspections/'.$thumbnail) }}">
                                 </span>
                             @endif
                         </div>
@@ -74,7 +74,7 @@
                         <div class="offset-sm-2 col-sm-10">
                             <button type="submit" class="btn btn-primary m-t"><i class="material-icons">
                                     &#xe31b;</i> {!! __('backend.add') !!}</button>
-                            <a href="{{ route('admin.inspections.index') }}"
+                            <a href="{{ route('admin.purchase_inspections.index') }}"
                                class="btn btn-default m-t"><i class="material-icons">
                                     &#xe5cd;</i> {!! __('backend.cancel') !!}</a>
                         </div>

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Livewire\Inspection;
+namespace App\Livewire\Admin\PurchaseInspection;
 
-use App\Models\Inspection;
+use App\Models\PurchaseInspection;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Attributes\Rule;
@@ -13,7 +13,7 @@ class Edit extends Component
 {
     use WithFileUploads;
 
-    public Inspection $inspection;
+    public PurchaseInspection $inspection;
     #[Rule('required')]
     public string $title;
     #[Rule('required')]
@@ -25,7 +25,7 @@ class Edit extends Component
     #[Rule('required')]
     public string $content;
 
-    public function mount(Inspection $inspection)
+    public function mount(PurchaseInspection $inspection)
     {
         $this->inspection = $inspection;
         $this->title = $inspection->title;
@@ -40,19 +40,19 @@ class Edit extends Component
 
         if ($this->new_thumbnail)
         {
-            !Storage::exists('public/uploads/inspections/' . $this->thumbnail) || Storage::delete('public/uploads/inspections/' . $this->thumbnail);
+            !Storage::exists('public/uploads/purchase-inspections/' . $this->thumbnail) || Storage::delete('public/uploads/purchase-inspections/' . $this->thumbnail);
             $imageName = Carbon::now()->timestamp . rand(0, 10) . '.' . $this->new_thumbnail->extension();
-            $this->new_thumbnail->storeAs('public/uploads/inspections', $imageName);
+            $this->new_thumbnail->storeAs('public/uploads/purchase-inspections', $imageName);
             $this->thumbnail =  $imageName;
         }
 
         $this->inspection->update($this->only('title', 'thumbnail', 'order', 'content'));
 
-        return redirect()->route('admin.inspections.index')->with('msg', __('backend.inspectionUpdated'));
+        return redirect()->route('admin.purchase_inspections.index')->with('msg', __('backend.purchaseInspectionUpdated'));
     }
 
     public function render()
     {
-        return view('livewire.inspection.edit');
+        return view('livewire.admin.purchase-inspection.edit');
     }
 }
