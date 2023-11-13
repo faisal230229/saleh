@@ -58,8 +58,7 @@
                                 {{ $inspection->title }}
                             </td>
                             <td class="text-center">
-                                {{ storage_path('storage/uploads/inspections/') }}
-                                <img src="{{ storage_path('/uploads/inspections/'.$inspection->thumbnail) }}" alt="">
+                                <img src="{{ Storage::url('uploads/inspections/'.$inspection->thumbnail) }}" alt="">
                                 <img src="{{ asset('storage/uploads/inspections/'.$inspection->thumbnail) }}" width="80"
                                      alt="{{ $inspection->title }}">
                             </td>
