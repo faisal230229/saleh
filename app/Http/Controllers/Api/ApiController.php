@@ -3,12 +3,16 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\InspectionResource;
+use App\Models\Inspection;
 use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
     public function inspections()
     {
-        dd('here');
+        $inspections = Inspection::orderBy('order')->paginate(1);
+
+        return  InspectionResource::collection($inspections);
     }
 }
