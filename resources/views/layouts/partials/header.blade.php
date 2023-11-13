@@ -12,6 +12,7 @@
             <a class="btn btn-fw primary" href="{{ route('admin.inspections.create') }}">
                 <i class="material-icons">&#xe02e;</i>
                 &nbsp; {{ __('backend.inspectionNew') }}</a>
+            {{ config('app.url') }}
         </div>
 
 
