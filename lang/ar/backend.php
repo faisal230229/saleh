@@ -660,5 +660,27 @@ return array(
     'action' => 'فعل',
     'inspectionCreated' => 'تمت إضافة التفتيش بنجاح',
     'inspectionDeleted' => 'تم حذف الفحص بنجاح',
+    'inspectionUpdated' => 'تم تحديث الفحص بنجاح',
+
+    'purchaseInspectionCreated' => 'تمت إضافة فحص الشراء بنجاح',
+    'purchaseInspectionDeleted' => 'تم حذف فحص الشراء بنجاح',
+    'purchaseInspectionUpdated' => 'تم تحديث فحص الشراء بنجاح',
+
+    'purchaseInspections' => 'عمليات فحص الشراء',
+
+    'purchaseInspectionNew' => 'فحص الشراء الجديد',
+
+    'tutorialCreated' => 'تمت إضافة البرنامج التعليمي بنجاح',
+    'tutorialDeleted' => 'تم حذف البرنامج التعليمي بنجاح',
+    'tutorialUpdated' => 'تم تحديث البرنامج التعليمي بنجاح',
+
+    'tutorials' => 'دروس',
+
+    'tutorialNew' => 'برنامج تعليمي جديد',
+    'youtubeLink' => 'رابط يوتيوب',
+    'featuredImage' => 'صورة مميزة',
+    'primaryContent' => 'المحتوى الأساسي',
+    'secondaryContent' => 'المحتوى الثانوي',
+    'secondaryImage' => 'الصورة الثانوية',
 
 );

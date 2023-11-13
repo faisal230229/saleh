@@ -62,7 +62,7 @@
                             <span class="nav-icon">
                                 <i class="material-icons">&#xe896;</i>
                             </span>
-                            <span class="nav-text">{{ __('backend.purchaseInspectionNew') }}</span>
+                            <span class="nav-text">{{ __('backend.purchaseInspections') }}</span>
                         </a>
                         <ul class="nav-sub">
                             <li>
