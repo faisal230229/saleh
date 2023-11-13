@@ -11,7 +11,7 @@ class ApiController extends Controller
 {
     public function inspections()
     {
-        $inspections = Inspection::orderBy('order')->paginate(1);
+        $inspections = Inspection::orderBy('order')->get();
 
         return  InspectionResource::collection($inspections);
     }
