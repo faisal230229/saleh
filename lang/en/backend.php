@@ -670,6 +670,19 @@ return array(
 
     'purchaseInspectionNew' => 'New Purchase Inspection',
 
+    'tutorialCreated' => 'Tutorial Added Successfully',
+    'tutorialDeleted' => 'Tutorial Deleted Successfully',
+    'tutorialUpdated' => 'Tutorial Updated Successfully',
+
+    'tutorials' => 'Tutorials',
+
+    'tutorialNew' => 'New Tutorial',
+    'youtubeLink' => 'Youtube Link',
+    'featuredImage' => 'Featured Image',
+    'primaryContent' => 'Primary Content',
+    'secondaryContent' => 'Secondary Content',
+    'secondaryImage' => 'Secondary Image',
+
 
 //    'search' => 'Search',
 );

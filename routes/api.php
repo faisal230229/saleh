@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/inspections', [\App\Http\Controllers\Api\ApiController::class, 'inspections']);
 Route::get('/purchase-inspections', [\App\Http\Controllers\Api\ApiController::class, 'purchaseInspections']);
+Route::get('/tutorials', [\App\Http\Controllers\Api\ApiController::class, 'tutorials']);
+Route::get('/tutorial/{tutorial}', [\App\Http\Controllers\Api\ApiController::class, 'showTutorial']);
